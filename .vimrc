@@ -41,6 +41,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'JoshCheek/seeing_is_believing'
 
 filetype plugin indent on
 
