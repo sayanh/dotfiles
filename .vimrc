@@ -11,6 +11,7 @@
 
 set nocompatible
 filetype off
+set shell=bash
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
@@ -40,6 +41,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-vividchalk'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-ruby/vim-ruby'
@@ -215,7 +217,8 @@ if has("gui_running") || $TERM == "xterm-256color"
   set background=dark " light
   let base16colorspace=256 " Access colors present in 256 colorspace
   " colorscheme base16-default
-  colorscheme base16-ocean
+  " colorscheme vividchalk
+  colorscheme murphy
 else
   let g:CSApprox_loaded = 0
 endif
@@ -457,3 +460,6 @@ au BufNewFile,BufRead .psqlrc      set filetype=sql
 au BufNewFile,BufRead *.less       set filetype=css
 au BufNewFile,BufRead bash_profile set filetype=sh
 au BufNewFile,BufRead *.hbs        set filetype=html
+
+
+set rnu
