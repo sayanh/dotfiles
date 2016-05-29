@@ -113,3 +113,5 @@ if ! shopt -oq posix; then
   fi
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
+export VISUAL=vim
+export EDITOR=vim
