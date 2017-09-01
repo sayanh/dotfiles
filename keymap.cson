@@ -28,10 +28,38 @@
 #
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it in the
-# Atom Flight Manual:
+# Atom Flight manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 '.platform-darwin atom-text-editor:not([mini])':
   'alt-q': 'tree-view:toggle'
-'*':
-    'editor':
-        'ctrl-w': 'softwrap:toggle'
+  'cmd-\\': 'tree-view:toggle'
+  'cmd-k cmd-b': 'tree-view:toggle'
+  'cmd-|': 'tree-view:reveal-active-file'
+  'ctrl-0': 'tree-view:toggle-focus'
+
+'.platform-darwin .tree-view':
+  'cmd-c': 'tree-view:copy'
+  'cmd-x': 'tree-view:cut'
+  'cmd-v': 'tree-view:paste'
+  'ctrl-f': 'tree-view:expand-item'
+  'ctrl-b': 'tree-view:collapse-directory'
+  'cmd-k l': 'tree-view:open-selected-entry-right'
+  'cmd-k left': 'tree-view:open-selected-entry-left'
+  'cmd-k h': 'tree-view:open-selected-entry-left'
+  'cmd-k up': 'tree-view:open-selected-entry-up'
+  'cmd-k k': 'tree-view:open-selected-entry-up'
+  'cmd-k down': 'tree-view:open-selected-entry-down'
+  'cmd-k j': 'tree-view:open-selected-entry-down'
+  'cmd-1': 'tree-view:open-selected-entry-in-pane-1'
+  'cmd-2': 'tree-view:open-selected-entry-in-pane-2'
+  'cmd-3': 'tree-view:open-selected-entry-in-pane-3'
+  'cmd-4': 'tree-view:open-selected-entry-in-pane-4'
+  'cmd-5': 'tree-view:open-selected-entry-in-pane-5'
+  'cmd-6': 'tree-view:open-selected-entry-in-pane-6'
+  'cmd-7': 'tree-view:open-selected-entry-in-pane-7'
+  'cmd-8': 'tree-view:open-selected-entry-in-pane-8'
+  'cmd-9': 'tree-view:open-selected-entry-in-pane-9'
+
+'.platform-darwin atom-text-editor':
+  'atl-cmd-enter': 'goto-definition:go'
+  'ctrl-shift-W': 'editor:toggle-soft-wrap'
