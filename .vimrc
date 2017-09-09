@@ -11,13 +11,12 @@
 
 set nocompatible
 filetype off
-set shell=bash
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
+Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/vundle'
-
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
@@ -41,11 +40,13 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-vividchalk'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'JoshCheek/seeing_is_believing'
+Plugin 'pangloss/vim-javascript'
+Plugin 'moll/vim-node'
+Plugin 'burnettk/vim-angular'
 
 filetype plugin indent on
 
@@ -216,9 +217,9 @@ if has("gui_running") || $TERM == "xterm-256color"
   set t_Co=256
   set background=dark " light
   let base16colorspace=256 " Access colors present in 256 colorspace
-  " colorscheme base16-default
-  " colorscheme vividchalk
-  colorscheme murphy
+  "colorscheme base16-default
+  "colorscheme base16-ocean
+  colorscheme molokai
 else
   let g:CSApprox_loaded = 0
 endif
@@ -416,9 +417,9 @@ cmap w!! w !sudo tee % >/dev/null
 " └───────────────────────────────────┘
 
 " Ctrl+C to copy and Ctrl+P to paste
-" vnoremap <C-C> "+y
-" inoremap <C-P> <ESC>"+pa
-" nnoremap <C-P> "+p
+vnoremap <C-C> "+y
+inoremap <C-P> <ESC>"+pa
+nnoremap <C-P> "+p
 
 " Ctrl+S to save the current file
 nmap <c-s> :w<CR>
@@ -461,5 +462,3 @@ au BufNewFile,BufRead *.less       set filetype=css
 au BufNewFile,BufRead bash_profile set filetype=sh
 au BufNewFile,BufRead *.hbs        set filetype=html
 
-
-set rnu
