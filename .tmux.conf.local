@@ -339,3 +339,7 @@ set -g base-index 1
 set -g status-left ""
 set -g status-right "tmux"
 set -g default-terminal "screen-256color"
+
+# Shift arrow to switch windows
+bind -n S-Left  previous-window
+bind -n S-Right next-window
